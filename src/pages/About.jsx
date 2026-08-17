@@ -5,27 +5,85 @@ function About() {
     <div>
 
       {/* ================= PAGE HERO ================= */}
-      <section className="relative overflow-hidden bg-blue-950">
+      <section
+        className="relative overflow-hidden bg-blue-950 bg-cover bg-center"
+        style={{
+          backgroundImage: "url('/images/classroom.jpg')",
+        }}
+      >
 
-        {/* Decorative Elements */}
-        <div className="absolute -right-24 -top-24 h-72 w-72 rounded-full bg-blue-800 opacity-50 blur-3xl" />
+        {/* Dark Gradient */}
+        <div className="absolute inset-0 bg-gradient-to-r from-blue-950 via-blue-950/90 to-blue-950/35" />
 
-        <div className="absolute -bottom-32 -left-24 h-80 w-80 rounded-full bg-blue-800 opacity-40 blur-3xl" />
+        {/* Decorative Glow */}
+        <div className="absolute -left-32 -top-32 h-80 w-80 rounded-full bg-blue-600/20 blur-3xl" />
 
-        <div className="relative mx-auto max-w-7xl px-5 py-20 text-center sm:py-24 lg:px-8">
+        <div className="absolute -bottom-40 right-0 h-96 w-96 rounded-full bg-blue-500/15 blur-3xl" />
 
-          <p className="text-sm font-bold uppercase tracking-[0.2em] text-blue-300">
-            About JSI
-          </p>
+        {/* Content */}
+        <div className="relative mx-auto flex min-h-[480px] max-w-7xl items-center px-5 py-20 sm:min-h-[520px] lg:min-h-[560px] lg:px-8">
 
-          <h1 className="mt-4 text-4xl font-extrabold tracking-tight text-white sm:text-5xl">
-            About JSI Tuition & Coaching Centre
-          </h1>
+          <div className="max-w-3xl">
 
-          <p className="mx-auto mt-6 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg">
-            A learning environment focused on understanding,
-            academic growth, confidence, and continuous improvement.
-          </p>
+            {/* Label */}
+            <div className="flex items-center gap-3">
+
+              <span className="h-0.5 w-10 bg-blue-400" />
+
+              <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-300">
+                About JSI
+              </p>
+
+            </div>
+
+            {/* Heading */}
+            <h1 className="mt-6 text-4xl font-extrabold leading-tight tracking-tight text-white sm:text-5xl lg:text-6xl">
+
+              About{" "}
+
+              <span className="text-blue-400">
+                JSI
+              </span>{" "}
+
+              Tuition & Coaching Centre
+
+            </h1>
+
+            {/* Description */}
+            <p className="mt-6 max-w-2xl text-base leading-7 text-blue-100 sm:text-lg">
+              A learning environment focused on understanding,
+              academic growth, confidence, and continuous improvement.
+            </p>
+
+            {/* Button */}
+            <div className="mt-8">
+
+              <Link
+                to="/contact"
+                className="inline-flex items-center gap-2 rounded-lg bg-blue-600 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-950/30 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-500"
+              >
+                Join Our Learning Community
+
+                <svg
+                  xmlns="http://www.w3.org/2000/svg"
+                  fill="none"
+                  viewBox="0 0 24 24"
+                  strokeWidth="2"
+                  stroke="currentColor"
+                  className="h-4 w-4"
+                >
+                  <path
+                    strokeLinecap="round"
+                    strokeLinejoin="round"
+                    d="M13.5 4.5 19 10m0 0-5.5 5.5M19 10H5"
+                  />
+                </svg>
+
+              </Link>
+
+            </div>
+
+          </div>
 
         </div>
 
@@ -33,81 +91,50 @@ function About() {
 
 
       {/* ================= INTRODUCTION ================= */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-20 sm:py-24">
 
-        <div className="mx-auto grid max-w-7xl items-center gap-12 px-5 lg:grid-cols-2 lg:px-8">
+        <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
 
-          {/* LEFT VISUAL */}
+          {/* LEFT IMAGE */}
           <div className="relative">
 
-            <div className="relative mx-auto max-w-lg overflow-hidden rounded-3xl bg-blue-900 p-8 shadow-2xl">
+            {/* Main Image */}
+            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
 
-              {/* Decorative Circles */}
-              <div className="absolute -right-16 -top-16 h-48 w-48 rounded-full bg-blue-800" />
+              <img
+                src="/images/teacher-helping.jpg"
+                alt="Teacher helping students"
+                className="h-[420px] w-full object-cover sm:h-[480px]"
+              />
 
-              <div className="absolute -bottom-20 -left-20 h-56 w-56 rounded-full bg-blue-800" />
+              {/* Image Overlay */}
+              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent" />
 
-              <div className="relative">
+              {/* Image Caption */}
+              <div className="absolute bottom-0 left-0 right-0 p-7">
 
-                {/* Book Icon */}
-                <div className="flex h-20 w-20 items-center justify-center rounded-2xl bg-white text-blue-900 shadow-lg">
-
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.6"
-                    stroke="currentColor"
-                    className="h-10 w-10"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
-                    />
-
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"
-                    />
-
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M8 6h8M8 10h8M8 14h5"
-                    />
-                  </svg>
-
-                </div>
-
-
-                <p className="mt-8 text-sm font-semibold uppercase tracking-widest text-blue-300">
+                <p className="text-sm font-semibold uppercase tracking-widest text-blue-200">
                   JSI Tuition & Coaching Centre
                 </p>
 
-
-                <h2 className="mt-3 text-3xl font-bold leading-tight text-white sm:text-4xl">
-                  A Promise of
-                  <span className="block text-blue-200">
-                    Improvement
-                  </span>
-                </h2>
-
-
-                <div className="mt-8 border-t border-blue-800 pt-6">
-
-                  <p className="text-sm leading-6 text-blue-100">
-                    Under the Supervision of
-                  </p>
-
-                  <p className="mt-2 font-semibold text-white">
-                    Sir Engr. Hafiz Muhammad Faizan-ul-Haq
-                  </p>
-
-                </div>
+                <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
+                  A Promise of Improvement
+                </h3>
 
               </div>
+
+            </div>
+
+            {/* Floating Supervision Card */}
+            <div className="absolute -bottom-7 right-5 max-w-xs rounded-2xl border border-blue-100 bg-white p-5 shadow-xl sm:right-8">
+
+              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
+                Under the Supervision of
+              </p>
+
+              <p className="mt-1 text-sm font-bold leading-5 text-blue-950">
+                Sir Engr. Hafiz Muhammad Faizan-ul-Haq
+              </p>
 
             </div>
 
@@ -177,10 +204,10 @@ function About() {
                       strokeLinejoin="round"
                       d="M4.5 21a7.5 7.5 0 0 1 15 0"
                     />
+
                   </svg>
 
                 </div>
-
 
                 <div>
 
@@ -206,10 +233,11 @@ function About() {
 
 
       {/* ================= VISION & MISSION ================= */}
-      <section className="bg-slate-50 py-20">
+      <section className="bg-slate-50 py-20 sm:py-24">
 
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
 
+          {/* Section Heading */}
           <div className="mx-auto max-w-3xl text-center">
 
             <p className="text-sm font-bold uppercase tracking-widest text-blue-800">
@@ -229,7 +257,20 @@ function About() {
           </div>
 
 
-          <div className="mt-12 grid gap-6 md:grid-cols-2">
+          {/* SECTION IMAGE */}
+          <div className="mt-12 overflow-hidden rounded-3xl shadow-xl">
+
+            <img
+              src="/images/students.jpg"
+              alt="Students learning together"
+              className="h-[260px] w-full object-cover sm:h-[340px] lg:h-[400px]"
+            />
+
+          </div>
+
+
+          {/* Vision + Mission */}
+          <div className="mt-10 grid gap-6 md:grid-cols-2">
 
             {/* Vision */}
             <div className="group rounded-2xl border border-slate-200 bg-white p-8 shadow-sm transition duration-300 hover:-translate-y-1 hover:shadow-xl">
@@ -244,6 +285,7 @@ function About() {
                   stroke="currentColor"
                   className="h-7 w-7"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -255,6 +297,7 @@ function About() {
                     cy="12"
                     r="2.5"
                   />
+
                 </svg>
 
               </div>
@@ -285,6 +328,7 @@ function About() {
                   stroke="currentColor"
                   className="h-7 w-7"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -302,6 +346,7 @@ function About() {
                     strokeLinejoin="round"
                     d="M4 19h16"
                   />
+
                 </svg>
 
               </div>
@@ -327,7 +372,7 @@ function About() {
 
 
       {/* ================= VALUES ================= */}
-      <section className="bg-white py-20">
+      <section className="bg-white py-20 sm:py-24">
 
         <div className="mx-auto max-w-7xl px-5 lg:px-8">
 
@@ -346,7 +391,7 @@ function About() {
 
           <div className="mt-12 grid gap-5 sm:grid-cols-2 lg:grid-cols-4">
 
-            {/* Value 1 */}
+            {/* Excellence */}
             <div className="rounded-2xl border border-slate-200 p-6 text-center transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
 
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
@@ -359,11 +404,13 @@ function About() {
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
                     d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"
                   />
+
                 </svg>
 
               </div>
@@ -379,7 +426,7 @@ function About() {
             </div>
 
 
-            {/* Value 2 */}
+            {/* Trust */}
             <div className="rounded-2xl border border-slate-200 p-6 text-center transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
 
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
@@ -392,6 +439,7 @@ function About() {
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -403,6 +451,7 @@ function About() {
                     strokeLinejoin="round"
                     d="m9 12 2 2 4-4"
                   />
+
                 </svg>
 
               </div>
@@ -418,7 +467,7 @@ function About() {
             </div>
 
 
-            {/* Value 3 */}
+            {/* Consistency */}
             <div className="rounded-2xl border border-slate-200 p-6 text-center transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
 
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
@@ -431,6 +480,7 @@ function About() {
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -442,6 +492,7 @@ function About() {
                     cy="12"
                     r="9"
                   />
+
                 </svg>
 
               </div>
@@ -457,7 +508,7 @@ function About() {
             </div>
 
 
-            {/* Value 4 */}
+            {/* Improvement */}
             <div className="rounded-2xl border border-slate-200 p-6 text-center transition hover:-translate-y-1 hover:border-blue-200 hover:shadow-lg">
 
               <div className="mx-auto flex h-12 w-12 items-center justify-center rounded-full bg-blue-100 text-blue-900">
@@ -470,6 +521,7 @@ function About() {
                   stroke="currentColor"
                   className="h-6 w-6"
                 >
+
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
@@ -487,6 +539,7 @@ function About() {
                     strokeLinejoin="round"
                     d="M5 4h14"
                   />
+
                 </svg>
 
               </div>
@@ -509,7 +562,7 @@ function About() {
 
 
       {/* ================= CTA ================= */}
-      <section className="bg-slate-50 py-16">
+      <section className="bg-slate-50 py-16 sm:py-20">
 
         <div className="mx-auto max-w-4xl px-5 text-center">
 
