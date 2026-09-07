@@ -418,7 +418,7 @@ function Home() {
           <div className="mt-12 overflow-hidden rounded-3xl shadow-xl">
 
             <img
-              src="/images/students.jpg"
+              src="/images/students.png"
               alt="Students studying together"
               className="h-[260px] w-full object-cover sm:h-[340px] lg:h-[400px]"
             />
