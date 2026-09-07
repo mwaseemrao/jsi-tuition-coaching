@@ -12,7 +12,8 @@ function Home() {
 
         <div className="absolute -bottom-40 -left-40 h-96 w-96 rounded-full bg-blue-50 blur-3xl" />
 
-        <div className="relative mx-auto grid max-w-7xl items-center gap-12 px-5 py-16 sm:py-20 lg:grid-cols-2 lg:gap-16 lg:px-8 lg:py-24">
+
+        <div className="relative mx-auto grid max-w-7xl items-center gap-10 px-5 py-10 sm:py-12 lg:grid-cols-2 lg:gap-14 lg:px-8 lg:py-14">
 
           {/* ================= HERO CONTENT ================= */}
           <div>
@@ -20,19 +21,23 @@ function Home() {
             {/* Small Label */}
             <div className="flex items-center gap-3">
 
-              <span className="h-0.5 w-10 bg-blue-700" />
+              {/* Optional Label */}
+              {/* 
+        <span className="h-0.5 w-10 bg-blue-700" />
 
-              <p className="text-sm font-bold uppercase tracking-[0.22em] text-blue-800">
-                JSI Tuition & Coaching Centre
-              </p>
+        <p className="text-sm font-bold uppercase tracking-[0.22em] text-blue-800">
+          JSI Tuition & Coaching Centre
+        </p>
+        */}
 
             </div>
 
 
             {/* Heading */}
-            <h1 className="mt-5 text-4xl font-extrabold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-6xl">
+            <h1 className="mt-2 text-4xl font-extrabold leading-tight tracking-tight text-blue-950 sm:text-5xl lg:text-5xl">
 
               Building Strong
+
               <span className="block text-blue-700">
                 Foundations
               </span>
@@ -43,7 +48,7 @@ function Home() {
 
 
             {/* Description */}
-            <p className="mt-6 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
+            <p className="mt-5 max-w-xl text-base leading-7 text-slate-600 sm:text-lg">
               A focused learning environment designed to help
               students understand concepts, improve academically,
               build confidence, and continue progressing.
@@ -51,11 +56,11 @@ function Home() {
 
 
             {/* Buttons */}
-            <div className="mt-8 flex flex-col gap-3 sm:flex-row">
+            <div className="mt-6 flex flex-col gap-3 sm:flex-row">
 
               <Link
                 to="/contact"
-                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-900 px-6 py-3.5 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-800"
+                className="inline-flex items-center justify-center gap-2 rounded-lg bg-blue-900 px-6 py-3 text-sm font-bold text-white shadow-lg shadow-blue-900/20 transition-all duration-200 hover:-translate-y-0.5 hover:bg-blue-800"
               >
                 Contact JSI
 
@@ -79,7 +84,7 @@ function Home() {
 
               <Link
                 to="/about"
-                className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3.5 text-sm font-bold text-blue-950 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50"
+                className="inline-flex items-center justify-center rounded-lg border border-slate-300 bg-white px-6 py-3 text-sm font-bold text-blue-950 transition-all duration-200 hover:-translate-y-0.5 hover:border-blue-300 hover:bg-blue-50"
               >
                 Learn More
               </Link>
@@ -88,11 +93,13 @@ function Home() {
 
 
             {/* Small Trust Message */}
-            <div className="mt-8 flex items-center gap-3 text-sm text-slate-500">
+            <div className="mt-6 flex items-center gap-3 text-sm text-slate-500">
 
               <div className="flex -space-x-2">
 
+                {/* Person Icon */}
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-blue-100 text-blue-800">
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -106,16 +113,20 @@ function Home() {
                       strokeLinejoin="round"
                       d="M12 14a5 5 0 1 0 0-10 5 5 0 0 0 0 10Z"
                     />
+
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
                       d="M4.5 21a7.5 7.5 0 0 1 15 0"
                     />
                   </svg>
+
                 </div>
 
 
+                {/* Plus Icon */}
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-blue-200 text-blue-900">
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -130,10 +141,13 @@ function Home() {
                       d="M12 3v18M3 12h18"
                     />
                   </svg>
+
                 </div>
 
 
+                {/* Star Icon */}
                 <div className="flex h-8 w-8 items-center justify-center rounded-full border-2 border-white bg-blue-900 text-white">
+
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
                     fill="none"
@@ -148,9 +162,11 @@ function Home() {
                       d="m12 3 2.7 5.5 6.1.9-4.4 4.3 1 6.1-5.4-2.9-5.4 2.9 1-6.1-4.4-4.3 6.1-.9L12 3Z"
                     />
                   </svg>
+
                 </div>
 
               </div>
+
 
               <p>
                 Focused learning. Continuous improvement.
@@ -170,20 +186,22 @@ function Home() {
               <img
                 src="/images/classroom.jpg"
                 alt="Students learning in a classroom"
-                className="h-[420px] w-full object-cover sm:h-[500px] lg:h-[540px]"
+                className="h-[360px] w-full object-cover sm:h-[420px] lg:h-[460px]"
               />
+
 
               {/* Image Gradient */}
               <div className="absolute inset-0 bg-gradient-to-t from-blue-950/60 via-transparent to-transparent" />
 
+
               {/* Bottom Image Text */}
-              <div className="absolute bottom-0 left-0 right-0 p-7">
+              <div className="absolute bottom-0 left-0 right-0 p-6">
 
                 <p className="text-xs font-bold uppercase tracking-[0.2em] text-blue-200">
                   Learn • Understand • Improve
                 </p>
 
-                <h2 className="mt-2 text-2xl font-extrabold text-white sm:text-3xl">
+                <h2 className="mt-2 text-xl font-extrabold text-white sm:text-2xl">
                   Creating Better Learning Experiences
                 </h2>
 
@@ -193,56 +211,60 @@ function Home() {
 
 
             {/* Floating Card */}
-            {/* <div className="absolute -bottom-6 -left-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-xl sm:-left-6">
+            {/* 
+      <div className="absolute -bottom-6 -left-4 rounded-2xl border border-blue-100 bg-white p-5 shadow-xl sm:-left-6">
 
-              <div className="flex items-center gap-4">
+        <div className="flex items-center gap-4">
 
-                <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-900 text-white">
+          <div className="flex h-12 w-12 items-center justify-center rounded-xl bg-blue-900 text-white">
 
-                  <svg
-                    xmlns="http://www.w3.org/2000/svg"
-                    fill="none"
-                    viewBox="0 0 24 24"
-                    strokeWidth="1.8"
-                    stroke="currentColor"
-                    className="h-6 w-6"
-                  >
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 19V5"
-                    />
+            <svg
+              xmlns="http://www.w3.org/2000/svg"
+              fill="none"
+              viewBox="0 0 24 24"
+              strokeWidth="1.8"
+              stroke="currentColor"
+              className="h-6 w-6"
+            >
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 19V5"
+              />
 
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 5c4-2 8 2 16 0v10c-8 2-12-2-16 0"
-                    />
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 5c4-2 8 2 16 0v10c-8 2-12-2-16 0"
+              />
 
-                    <path
-                      strokeLinecap="round"
-                      strokeLinejoin="round"
-                      d="M4 19h16"
-                    />
-                  </svg>
+              <path
+                strokeLinecap="round"
+                strokeLinejoin="round"
+                d="M4 19h16"
+              />
 
-                </div>
+            </svg>
 
-                <div>
+          </div>
 
-                  <p className="text-sm font-bold text-blue-950">
-                    Learn & Improve
-                  </p>
 
-                  <p className="mt-0.5 text-xs text-slate-500">
-                    Every step matters
-                  </p>
+          <div>
 
-                </div>
+            <p className="text-sm font-bold text-blue-950">
+              Learn & Improve
+            </p>
 
-              </div>
+            <p className="mt-0.5 text-xs text-slate-500">
+              Every step matters
+            </p>
 
-            </div> */}
+          </div>
+
+        </div>
+
+      </div>
+      */}
 
           </div>
 

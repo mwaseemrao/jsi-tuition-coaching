@@ -1,4 +1,5 @@
 import { useState } from "react"
+import emailjs from "@emailjs/browser"
 
 function Contact() {
   const [formData, setFormData] = useState({
@@ -6,6 +7,8 @@ function Contact() {
     phone: "",
     message: "",
   })
+
+  const [isSending, setIsSending] = useState(false)
 
   const handleChange = (e) => {
     const { name, value } = e.target
@@ -16,15 +19,41 @@ function Contact() {
     }))
   }
 
-  const handleSubmit = (e) => {
+  const handleSubmit = async (e) => {
     e.preventDefault()
 
-    const whatsappMessage = `Hello JSI Tuition & Coaching Centre.%0A%0AName: ${formData.name}%0APhone: ${formData.phone}%0A%0AMessage: ${formData.message}`
+    setIsSending(true)
 
-    window.open(
-      `https://wa.me/923120397239?text=${whatsappMessage}`,
-      "_blank"
-    )
+    try {
+      await emailjs.send(
+        import.meta.env.VITE_EMAILJS_SERVICE_ID,
+        import.meta.env.VITE_EMAILJS_TEMPLATE_ID,
+        {
+          name: formData.name,
+          phone: formData.phone,
+          message: formData.message,
+        },
+        {
+          publicKey: import.meta.env.VITE_EMAILJS_PUBLIC_KEY,
+        }
+      )
+
+      alert("Your message has been sent successfully!")
+
+      setFormData({
+        name: "",
+        phone: "",
+        message: "",
+      })
+    } catch (error) {
+      console.error("Email sending error:", error)
+
+      alert(
+        "Sorry, your message could not be sent. Please try again later."
+      )
+    } finally {
+      setIsSending(false)
+    }
   }
 
   return (
@@ -222,7 +251,7 @@ function Contact() {
                   <path
                     strokeLinecap="round"
                     strokeLinejoin="round"
-                    d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9c-2.2-2.5-3.3-5.5-3.3-9S9.8 5.5 12 3Z"
+                    d="M3 12h18M12 3c2.2 2.5 3.3 5.5 3.3 9s-1.1 6.5-3.3 9c-2.2-2.5-3.3-6.5-3.3-9S9.8 5.5 12 3Z"
                   />
                 </svg>
 
@@ -266,8 +295,8 @@ function Contact() {
             </h2>
 
             <p className="mt-3 leading-6 text-slate-600">
-              Fill out the form below and continue the conversation
-              with us on WhatsApp.
+              Fill out the form below and send us your message
+              directly via email.
             </p>
 
 
@@ -348,12 +377,14 @@ function Contact() {
               </div>
 
 
+              {/* Submit Button */}
               <button
                 type="submit"
-                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-900 px-6 py-3.5 font-bold text-white shadow-lg shadow-blue-900/20 transition hover:-translate-y-0.5 hover:bg-blue-800"
+                disabled={isSending}
+                className="flex w-full items-center justify-center gap-2 rounded-xl bg-blue-900 px-6 py-3.5 font-bold text-white shadow-lg shadow-blue-900/20 transition hover:-translate-y-0.5 hover:bg-blue-800 disabled:cursor-not-allowed disabled:opacity-60"
               >
 
-                Send via WhatsApp
+                {isSending ? "Sending..." : "Send via Email"}
 
                 <svg
                   xmlns="http://www.w3.org/2000/svg"
@@ -656,7 +687,7 @@ function Contact() {
 
 
       {/* ================= FINAL CTA ================= */}
-      <section className="bg-blue-950 py-16">
+      {/* <section className="bg-blue-950 py-16">
 
         <div className="mx-auto max-w-4xl px-5 text-center">
 
@@ -692,7 +723,8 @@ function Contact() {
 
         </div>
 
-      </section>
+      </section> */}
+
 
     </div>
   )

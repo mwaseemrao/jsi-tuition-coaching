@@ -72,7 +72,7 @@ function Footer() {
 
 
             {/* WhatsApp */}
-            <a
+            {/* <a
               href="https://wa.me/923120397239"
               target="_blank"
               rel="noopener noreferrer"
@@ -96,7 +96,7 @@ function Footer() {
 
               Chat on WhatsApp
 
-            </a>
+            </a> */}
 
           </div>
 
@@ -279,7 +279,7 @@ function Footer() {
         <div className="mx-auto flex max-w-7xl flex-col gap-3 px-5 py-6 text-center sm:flex-row sm:items-center sm:justify-between sm:text-left lg:px-8">
 
           <p className="text-sm text-blue-200">
-            © {new Date().getFullYear()} JSI Tuition & Coaching Centre.
+            © {new Date().getFullYear()} Softtech development & Creations.
             All rights reserved.
           </p>
 

@@ -28,11 +28,11 @@ function About() {
             {/* Label */}
             <div className="flex items-center gap-3">
 
-              <span className="h-0.5 w-10 bg-blue-400" />
+              {/* <span className="h-0.5 w-10 bg-blue-400" />
 
               <p className="text-sm font-bold uppercase tracking-[0.25em] text-blue-300">
                 About JSI
-              </p>
+              </p> */}
 
             </div>
 
@@ -95,11 +95,13 @@ function About() {
 
         <div className="mx-auto grid max-w-7xl items-center gap-14 px-5 lg:grid-cols-2 lg:px-8">
 
-          {/* LEFT IMAGE */}
+          {/* =====================================================
+        LEFT IMAGE
+    ====================================================== */}
+
           <div className="relative">
 
-            {/* Main Image */}
-            <div className="relative overflow-hidden rounded-3xl shadow-2xl">
+            <div className="overflow-hidden rounded-3xl shadow-2xl">
 
               <img
                 src="/images/teacher-helping.jpg"
@@ -107,52 +109,34 @@ function About() {
                 className="h-[420px] w-full object-cover sm:h-[480px]"
               />
 
-              {/* Image Overlay */}
-              <div className="absolute inset-0 bg-gradient-to-t from-blue-950/70 via-transparent to-transparent" />
-
-              {/* Image Caption */}
-              <div className="absolute bottom-0 left-0 right-0 p-7">
-
-                <p className="text-sm font-semibold uppercase tracking-widest text-blue-200">
-                  JSI Tuition & Coaching Centre
-                </p>
-
-                <h3 className="mt-2 text-2xl font-bold text-white sm:text-3xl">
-                  A Promise of Improvement
-                </h3>
-
-              </div>
-
-            </div>
-
-            {/* Floating Supervision Card */}
-            <div className="absolute -bottom-7 right-5 max-w-xs rounded-2xl border border-blue-100 bg-white p-5 shadow-xl sm:right-8">
-
-              <p className="text-xs font-semibold uppercase tracking-wide text-blue-700">
-                Under the Supervision of
-              </p>
-
-              <p className="mt-1 text-sm font-bold leading-5 text-blue-950">
-                Sir Engr. Hafiz Muhammad Faizan-ul-Haq
-              </p>
-
             </div>
 
           </div>
 
 
-          {/* RIGHT CONTENT */}
+          {/* =====================================================
+        RIGHT CONTENT
+    ====================================================== */}
+
           <div>
+
+            {/* Section Label */}
 
             <p className="text-sm font-bold uppercase tracking-widest text-blue-800">
               Who We Are
             </p>
 
+
+            {/* Heading */}
+
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl">
               Helping Students Learn With Confidence
             </h2>
 
-            <div className="mt-6 space-y-5 leading-7 text-slate-600">
+
+            {/* Description */}
+
+            <div className="mt-6 space-y-5 text-base leading-8 text-slate-600">
 
               <p>
                 JSI Tuition & Coaching Centre is an educational
@@ -178,12 +162,17 @@ function About() {
             </div>
 
 
-            {/* Supervision Card */}
-            <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-5">
+            {/* =====================================================
+          SUPERVISION CARD
+      ====================================================== */}
+
+            <div className="mt-8 rounded-2xl border border-blue-100 bg-blue-50 p-5 sm:p-6">
 
               <div className="flex items-start gap-4">
 
-                <div className="flex h-11 w-11 shrink-0 items-center justify-center rounded-xl bg-blue-900 text-white">
+                {/* Icon */}
+
+                <div className="flex h-12 w-12 shrink-0 items-center justify-center rounded-xl bg-[#123D7A] text-white">
 
                   <svg
                     xmlns="http://www.w3.org/2000/svg"
@@ -193,6 +182,7 @@ function About() {
                     stroke="currentColor"
                     className="h-5 w-5"
                   >
+
                     <path
                       strokeLinecap="round"
                       strokeLinejoin="round"
@@ -209,13 +199,16 @@ function About() {
 
                 </div>
 
+
+                {/* Supervision Text */}
+
                 <div>
 
                   <p className="text-sm font-semibold text-blue-800">
                     Under the Supervision of
                   </p>
 
-                  <p className="mt-1 font-bold text-blue-950">
+                  <p className="mt-1 font-bold leading-6 text-blue-950">
                     Sir Engr. Hafiz Muhammad Faizan-ul-Haq
                   </p>
 
