@@ -1,178 +1,6 @@
 import { Link } from "react-router-dom"
 
 function Services() {
-  const services = [
-    {
-      number: "01",
-      title: "Academic Support",
-      description:
-        "Focused academic guidance to help students understand their coursework, strengthen concepts, and stay consistent with their studies.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M4 19.5A2.5 2.5 0 0 1 6.5 17H20"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6.5 2H20v20H6.5A2.5 2.5 0 0 1 4 19.5v-15A2.5 2.5 0 0 1 6.5 2Z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M8 6h8M8 10h8M8 14h5"
-          />
-        </svg>
-      ),
-    },
-
-    {
-      number: "02",
-      title: "Concept Building",
-      description:
-        "We emphasize understanding concepts clearly so students can develop a stronger academic foundation instead of relying only on memorization.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 3v18"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M5 8h14M5 16h14"
-          />
-          <circle cx="12" cy="12" r="9" />
-        </svg>
-      ),
-    },
-
-    {
-      number: "03",
-      title: "Exam Preparation",
-      description:
-        "Structured preparation and practice can help students approach their academic assessments with greater understanding and confidence.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M6 3h12v18H6z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M9 7h6M9 11h6M9 15h3"
-          />
-        </svg>
-      ),
-    },
-
-    {
-      number: "04",
-      title: "Regular Guidance",
-      description:
-        "Consistent guidance helps students identify areas that need attention and maintain a steady approach toward their academic goals.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <circle cx="12" cy="12" r="9" />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 7v5l3 2"
-          />
-        </svg>
-      ),
-    },
-
-    {
-      number: "05",
-      title: "Student Development",
-      description:
-        "Beyond academic work, we encourage students to develop confidence, discipline, consistency, and a positive attitude toward learning.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M12 3 4 7v5c0 5 3.5 8 8 9 4.5-1 8-4 8-9V7l-8-4Z"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m9 12 2 2 4-4"
-          />
-        </svg>
-      ),
-    },
-
-    {
-      number: "06",
-      title: "Continuous Improvement",
-      description:
-        "Our approach encourages students to review their progress, learn from mistakes, practice regularly, and keep improving.",
-      icon: (
-        <svg
-          xmlns="http://www.w3.org/2000/svg"
-          fill="none"
-          viewBox="0 0 24 24"
-          strokeWidth="1.7"
-          stroke="currentColor"
-          className="h-7 w-7"
-        >
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="m4 16 5-5 4 4 7-8"
-          />
-          <path
-            strokeLinecap="round"
-            strokeLinejoin="round"
-            d="M16 7h4v4"
-          />
-        </svg>
-      ),
-    },
-  ]
-
   return (
     <div>
 
@@ -211,58 +39,223 @@ function Services() {
           <div className="mx-auto max-w-3xl text-center">
 
             <p className="text-sm font-bold uppercase tracking-widest text-blue-800">
-              Our Approach
+              Our Programs
             </p>
 
             <h2 className="mt-3 text-3xl font-extrabold tracking-tight text-blue-950 sm:text-4xl">
-              More Than Just Tuition
+              Learning Programs at JSI
             </h2>
 
             <p className="mt-5 leading-7 text-slate-600">
-              At JSI Tuition & Coaching Centre, we aim to create
-              a learning environment where students can understand
-              their subjects, receive guidance, practice consistently,
-              and work toward continuous improvement.
+              JSI Tuition & Coaching Centre provides different learning
+              programs designed to support students at different stages
+              of their academic journey.
             </p>
 
           </div>
 
 
-          {/* ================= SERVICES GRID ================= */}
-          <div className="mt-14 grid gap-6 md:grid-cols-2 lg:grid-cols-3">
-
-            {services.map((service) => (
-              <div
-                key={service.number}
-                className="group relative overflow-hidden rounded-2xl border border-slate-200 bg-white p-7 shadow-sm transition duration-300 hover:-translate-y-1 hover:border-blue-200 hover:shadow-xl"
-              >
-
-                {/* Number */}
-                <span className="absolute right-5 top-4 text-5xl font-black text-slate-100 transition group-hover:text-blue-50">
-                  {service.number}
-                </span>
+          {/* ================= FOUR JSI SERVICES ================= */}
+          <div className="mt-14 grid gap-8 md:grid-cols-2">
 
 
-                {/* Icon */}
-                <div className="relative flex h-14 w-14 items-center justify-center rounded-2xl bg-blue-100 text-blue-900 transition group-hover:bg-blue-900 group-hover:text-white">
-                  {service.icon}
+            {/* ================= SERVICE 1 ================= */}
+            <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="relative h-64 overflow-hidden">
+
+                <img
+                  src="/images/service2.jpg"
+                  alt="JSI Pre-Schooling"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent" />
+
+                <div className="absolute bottom-5 left-5">
+
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-200">
+                    Program 01
+                  </p>
+
+                  <h3 className="mt-1 text-2xl font-extrabold text-white">
+                    JSI PRE-SCHOOLING
+                  </h3>
+
                 </div>
 
-
-                <h3 className="relative mt-6 text-xl font-bold text-blue-950">
-                  {service.title}
-                </h3>
+              </div>
 
 
-                <p className="relative mt-3 leading-7 text-slate-600">
-                  {service.description}
+              <div className="p-6">
+
+                <p className="text-sm leading-7 text-slate-600">
+                  A supportive learning environment for young learners,
+                  focusing on basic concepts, confidence building,
+                  classroom habits, and early academic development.
                 </p>
 
+                <div className="mt-5 flex items-center gap-2 text-sm font-bold text-blue-900">
 
-                <div className="mt-6 h-1 w-10 rounded-full bg-blue-900 transition-all duration-300 group-hover:w-20" />
+                  <span className="h-2 w-2 rounded-full bg-blue-900" />
+
+                  Strong foundations for early learning
+
+                </div>
 
               </div>
-            ))}
+
+            </div>
+
+
+            {/* ================= SERVICE 2 ================= */}
+            <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="relative h-64 overflow-hidden">
+
+                <img
+                  src="/images/service1.jpg"
+                  alt="JSI Tuition Centre"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent" />
+
+                <div className="absolute bottom-5 left-5">
+
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-200">
+                    Program 02
+                  </p>
+
+                  <h3 className="mt-1 text-2xl font-extrabold text-white">
+                    JSI TUITION CENTRE
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <div className="p-6">
+
+                <p className="text-sm leading-7 text-slate-600">
+                  Academic support focused on improving students'
+                  understanding of subjects, completing coursework,
+                  strengthening concepts, and maintaining consistent
+                  academic progress.
+                </p>
+
+                <div className="mt-5 flex items-center gap-2 text-sm font-bold text-blue-900">
+
+                  <span className="h-2 w-2 rounded-full bg-blue-900" />
+
+                  Focused academic support and guidance
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* ================= SERVICE 3 ================= */}
+            <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="relative h-64 overflow-hidden">
+
+                <img
+                  src="/images/service4.jpg"
+                  alt="JSI Basic Classes"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent" />
+
+                <div className="absolute bottom-5 left-5">
+
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-200">
+                    Program 03
+                  </p>
+
+                  <h3 className="mt-1 text-2xl font-extrabold text-white">
+                    JSI BASIC CLASSES
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <div className="p-6">
+
+                <p className="text-sm leading-7 text-slate-600">
+                  Structured classes designed to strengthen fundamental
+                  knowledge, improve subject understanding, and help
+                  students build confidence through clear and consistent
+                  learning.
+                </p>
+
+                <div className="mt-5 flex items-center gap-2 text-sm font-bold text-blue-900">
+
+                  <span className="h-2 w-2 rounded-full bg-blue-900" />
+
+                  Build concepts from the basics
+
+                </div>
+
+              </div>
+
+            </div>
+
+
+            {/* ================= SERVICE 4 ================= */}
+            <div className="group overflow-hidden rounded-2xl border border-slate-200 bg-white shadow-sm transition-all duration-300 hover:-translate-y-1 hover:shadow-xl">
+
+              <div className="relative h-64 overflow-hidden">
+
+                <img
+                  src="/images/campus.jpg"
+                  alt="JSI Coaching Centre"
+                  className="h-full w-full object-cover transition-transform duration-500 group-hover:scale-105"
+                />
+
+                <div className="absolute inset-0 bg-gradient-to-t from-blue-950/80 via-blue-950/20 to-transparent" />
+
+                <div className="absolute bottom-5 left-5">
+
+                  <p className="text-xs font-bold uppercase tracking-widest text-blue-200">
+                    Program 04
+                  </p>
+
+                  <h3 className="mt-1 text-2xl font-extrabold text-white">
+                    JSI COACHING CENTRE
+                  </h3>
+
+                </div>
+
+              </div>
+
+
+              <div className="p-6">
+
+                <p className="text-sm leading-7 text-slate-600">
+                  Coaching support aimed at helping students prepare
+                  effectively for examinations, improve performance,
+                  manage academic challenges, and work toward better
+                  results.
+                </p>
+
+                <div className="mt-5 flex items-center gap-2 text-sm font-bold text-blue-900">
+
+                  <span className="h-2 w-2 rounded-full bg-blue-900" />
+
+                  Exam preparation and performance improvement
+
+                </div>
+
+              </div>
+
+            </div>
 
           </div>
 
@@ -398,7 +391,7 @@ function Services() {
 
             <div className="mt-8 space-y-5">
 
-              {/* Point */}
+              {/* Point 1 */}
               <div className="flex gap-4">
 
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700">
@@ -421,6 +414,7 @@ function Services() {
                 </div>
 
                 <div>
+
                   <h3 className="font-bold text-blue-950">
                     Clear Learning
                   </h3>
@@ -428,12 +422,13 @@ function Services() {
                   <p className="mt-1 text-sm leading-6 text-slate-500">
                     Focus on understanding rather than simply memorizing.
                   </p>
+
                 </div>
 
               </div>
 
 
-              {/* Point */}
+              {/* Point 2 */}
               <div className="flex gap-4">
 
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700">
@@ -456,6 +451,7 @@ function Services() {
                 </div>
 
                 <div>
+
                   <h3 className="font-bold text-blue-950">
                     Consistent Support
                   </h3>
@@ -463,12 +459,13 @@ function Services() {
                   <p className="mt-1 text-sm leading-6 text-slate-500">
                     Encourage students to maintain regular learning habits.
                   </p>
+
                 </div>
 
               </div>
 
 
-              {/* Point */}
+              {/* Point 3 */}
               <div className="flex gap-4">
 
                 <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-green-100 text-green-700">
@@ -491,6 +488,7 @@ function Services() {
                 </div>
 
                 <div>
+
                   <h3 className="font-bold text-blue-950">
                     Growth Mindset
                   </h3>
@@ -498,6 +496,7 @@ function Services() {
                   <p className="mt-1 text-sm leading-6 text-slate-500">
                     Motivate students to learn from mistakes and keep improving.
                   </p>
+
                 </div>
 
               </div>
@@ -539,6 +538,7 @@ function Services() {
                     strokeLinejoin="round"
                     d="M21 8v6"
                   />
+
                 </svg>
 
               </div>
